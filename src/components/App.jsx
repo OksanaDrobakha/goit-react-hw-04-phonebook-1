@@ -40,7 +40,7 @@ export default function App() {
     if (names.some(name => name.toLowerCase() === contact.name.toLowerCase())) {
       alert(`${contact.name} is already in contacts.`);
     } else {
-      setContacts([...contacts, contact]);
+      setContacts(prevContacts => [...prevContacts, contact]);
     }
   };
 
